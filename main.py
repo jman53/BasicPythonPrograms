@@ -1,4 +1,6 @@
 import sys
+from builtins import int
+
 import fizzbuzz
 import QuadForm
 """
@@ -14,7 +16,7 @@ def main():
           "************************************")
     print(sys.argv)
     if sys.argv[1] == "fizzbuzz" or sys.argv[1] == "FIZZBUZZ":
-            if sys.argv[2] > -1
+            if sys.argv[2] > -1:
                 fizzbuzz.calc(int(sys.argv[2]))
     if sys.argv[1] == "QuadForm":
         QuadForm.init()
