@@ -1,8 +1,8 @@
 import sys
 from builtins import int
 
-import fizzbuzz
-import QuadForm
+from modules import fizzbuzz, QuadForm
+
 """
 Author: Jordan Kasoff
 Date: 2019
