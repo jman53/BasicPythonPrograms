@@ -14,10 +14,10 @@ def main():
           "************************************")
     print(sys.argv)
     if sys.argv[1] == "fizzbuzz" or sys.argv[1] == "FIZZBUZZ":
-            fizzbuzz.calc(int(sys.argv[2]))
+            if sys.argv[2] > -1
+                fizzbuzz.calc(int(sys.argv[2]))
     if sys.argv[1] == "QuadForm":
-        if __name__ == '__main__':
-            QuadForm.init()
+        QuadForm.init()
 
 
 main()
