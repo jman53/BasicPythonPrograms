@@ -5,18 +5,25 @@ Github
 """
 import sys
 import math
+from builtins import float, input, ValueError
 
 
 def calc(ConstA, ConstB, ConstC):
     LeftRoot = ConstB * ConstB
     RightRoot = 4 * ConstA * ConstC
-    TotalRoot = math.sqrt(LeftRoot - RightRoot)
+    MiddleRoot = LeftRoot - RightRoot
+    try:
+        TotalRoot = math.sqrt(MiddleRoot)
+    except ValueError:
+        print("Error, no X-intercept. Please try a new function")
+        init()
     Denom= 2 * ConstA
-    AddNom = (-1 * ConstB) + (TotalRoot)
-    NegNom = (-1 * ConstB) - (TotalRoot)
+    AddNom = (-1 * ConstB) + TotalRoot
+    NegNom = (-1 * ConstB) - TotalRoot
     RootOne = AddNom / Denom
     RootTwo = NegNom / Denom
-    print (RootOne, RootTwo)
+    print ("Root one is " + RootOne)
+    print ("Root two is " + RootTwo)
 
 
 def init():
@@ -25,7 +32,7 @@ def init():
     ConstB = input("Value for Constant B: ")
     ConstC = input("Value for Constant C: ")
     print ("You have entered the following values: " + ConstA, ConstB, ConstC)
-    calc(int(ConstA), int(ConstB), int(ConstC))
+    calc(float(ConstA), float(ConstB), float(ConstC))
 
 
 
